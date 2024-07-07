@@ -42,7 +42,7 @@ module.exports.signup = async (req , res) => {
         });
         const savedToken = await newToken.save();
 
-        const URL = `Kindly click on the link below to verify your email for Mid Orchard\nThis is a one time link\nYou will be redirected to the signin page from this link\nThank You\n\n${process.env.BASE_URL}users/${savedUser._id}/verify/${newToken.token}}`;
+        const URL = `Kindly click on the link below to verify your email for Mid Orchard\nThis is a one time link\nYou will be redirected to the signin page from this link\nThank You\n\n${process.env.BASE_URL}/users/${savedUser._id}/verify/${newToken.token}}`;
 
 
         await sendEmail(savedUser.email,"Verify Email for Mid Orchard",URL);

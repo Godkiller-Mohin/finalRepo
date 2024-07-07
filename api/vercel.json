@@ -9,7 +9,7 @@
         "dest": "/index.js",
         "methods": ["GET", "POST", "PUT", "DELETE"],
         "headers": {
-          "Access-Control-Allow-Origin": "https://midorchard-client.vercel.app",
+          "Access-Control-Allow-Origin": "https://final-repo-nine.vercel.app/",
           "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
           "Access-Control-Allow-Headers": "Content-Type, Authorization"
         }

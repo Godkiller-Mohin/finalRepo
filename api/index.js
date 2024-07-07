@@ -13,20 +13,20 @@ dotenv.config();
 app.use(express.json());
 
 
-// app.use(cors({
-//   origin: 'https://midorchard-client.vercel.app', // Adjust this to your frontend URL
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-// }));
+app.use(cors({
+  origin: 'https://final-repo-nine.vercel.app', // Adjust this to your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
-// app.options('*', cors());
+app.options('*', cors());
 
 
 mongoose.connect(
     process.env.MONGODB
 ).then(()=>{
     console.log('Connected to the database');
-    cleanupUnverifiedUsers();
+   // cleanupUnverifiedUsers();
 }
     
 ).catch((e)=>{
