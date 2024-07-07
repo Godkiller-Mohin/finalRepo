@@ -44,7 +44,7 @@ function Home() {
 
   const handleClickLogOut = async () => {
     try{
-      const res = await axios.post('/api/auth/signout');
+      const res = await axios.post('https://final-repo-server.vercel.app/api/auth/signout');
         dispatch(signoutSuccess());
         dispatch(resetForm());
     }

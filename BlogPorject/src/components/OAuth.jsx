@@ -65,7 +65,7 @@ function OAuth() {
             console.log('resultsFromGoogle');
             console.log(resultsFromGoogle);
             
-            const res = await axios.post('/api/auth/google', {
+            const res = await axios.post('https://final-repo-server.vercel.app/api/auth/google', {
                 name: resultsFromGoogle.user.displayName,
                 email: resultsFromGoogle.user.email,
                 googlePhotoURL: resultsFromGoogle.user.photoURL

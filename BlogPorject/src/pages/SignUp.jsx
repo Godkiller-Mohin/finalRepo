@@ -82,7 +82,7 @@ function Signup() {
     try {
     
       setErrorMessage(null);
-      const res = await axios.post('/api/auth/signup', {
+      const res = await axios.post('https://final-repo-server.vercel.app/api/auth/signup', {
         userName: name.trim(),
         email: email.trim(),
         password: password.trim(),

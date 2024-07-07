@@ -104,7 +104,7 @@ function Login(){
 
       dispatch(signInStart());
    
-      const res = await axios.post('/api/auth/signin', {
+      const res = await axios.post(`https://final-repo-server.vercel.app/api/auth/signin`, {
         email: email.trim(),
         password: password.trim()
 

@@ -121,7 +121,7 @@ function MyComponent() {
       };
 
       try {
-        await axios.post('/api/forms/submit-form', formData);
+        await axios.post('https://final-repo-server.vercel.app/api/forms/submit-form', formData);
         const propToSend = {
           roomName: "Super Deluxe Room",
           logo: "https://res.cloudinary.com/dgtt3iwmv/image/upload/v1720082755/logo_qf2djj.png",
